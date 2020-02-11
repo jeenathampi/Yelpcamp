@@ -35,10 +35,10 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(methodOverride('_method'));
 app.use(flash());
-//app.use(moment().format());
+
 
 app.set("view engine","ejs");
-//seedDB();
+
 
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
