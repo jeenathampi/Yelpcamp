@@ -18,7 +18,7 @@ var campgroundRoutes = require("./routes/campgrounds");
 var commentRoutes = require("./routes/comments");
 var indexRoutes = require("./routes/index");
 
-
+console.log(process.env.DBURL);
 mongoose.connect(process.env.DBURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({extended:true}));
