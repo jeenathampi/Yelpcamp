@@ -19,7 +19,7 @@ var commentRoutes = require("./routes/comments");
 var indexRoutes = require("./routes/index");
 
 
-mongoose.connect('mongodb://localhost:27017/yelpcamp', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/yelpcamp', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+ "/public"));
