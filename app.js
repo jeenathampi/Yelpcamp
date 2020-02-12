@@ -19,7 +19,6 @@ var commentRoutes = require("./routes/comments");
 var indexRoutes = require("./routes/index");
 
 mongoose.connect(process.env.DBURL, {useNewUrlParser: true, useFindAndModify: false });
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+ "/public"));
 app.use(session({
